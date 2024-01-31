@@ -1,0 +1,25 @@
+h1 {
+  font-weight: 650;
+  font-size: 40px;
+  margin: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+}
+
+.Todo-cointainer {
+  text-align: left;
+}
+
+.btn {
+  margin-bottom: 10px;
+  min-width: 100px;
+}
+
+.col-6 .col-4 {
+  margin: 3px;
+  padding: 0px;
+}

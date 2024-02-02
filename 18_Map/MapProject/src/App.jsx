@@ -1,8 +1,9 @@
 import "./App.css";
-
+import CoffeeItems from "./Components/coffeItems";
+import ErrorMessage from "./Components/ErrorMessage";
 function App() {
   let items = [
-    "Mocha",
+    "Mocha not Now",
     "Americano",
     "Latte",
     "Espresso",
@@ -13,17 +14,8 @@ function App() {
   return (
     <>
       <h1>Coffee Shop</h1>
-      {/* {items.length == 0 && <h3>Sorry! "there is currently nothing available."</h3>} */}
-      {items.length == 0 ? (
-        <h3>Sorry! "there is currently nothing available."</h3>
-      ) : null}
-      <ul className="list-group">
-        {items.map((item) => (
-          <li key={item} className="list-group-item">
-            {item}
-          </li>
-        ))}
-      </ul>
+      <ErrorMessage arg={items}></ErrorMessage>
+      <CoffeeItems arg={items}></CoffeeItems>
     </>
   );
 }

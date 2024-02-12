@@ -5,7 +5,11 @@ const CoffeeItems = ({ arg }) => {
     <>
       <ul className="list-group">
         {arg.map((item) => (
-          <Item key={item} coffeeitems={item}></Item>
+          <Item
+            key={item}
+            coffeeitems={item}
+            handiling={() => console.log(`${item} ordered`)}
+          ></Item>
         ))}
       </ul>
     </>

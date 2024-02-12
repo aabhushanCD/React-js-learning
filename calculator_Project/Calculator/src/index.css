@@ -1,0 +1,15 @@
+.Screen {
+  width: 300px;
+  padding: 10px;
+}
+#butnn {
+  width: 25px;
+  height: 25px;
+}
+.Butn {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  width: 300px;
+  justify-content: center;
+}

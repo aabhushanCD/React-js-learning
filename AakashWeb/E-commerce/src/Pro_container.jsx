@@ -1,24 +1,26 @@
-function Pro() {
+function Pro({ content }) {
   return (
     <>
-      <div class="pro">
-        <img src="./img/products/n1.jpg" alt="" />
-        <div class="des">
-          <span>adidas</span>
-          <h5>Cartoon Astronaut T-Shirts</h5>
-          <div class="star">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+      {content.map((item, index) => (
+        <div className="pro" key={index}>
+          <img src={`./img/products/n${index + 1}.jpg`} alt="" />
+          <div className="des">
+            <span>{item.Brand}</span>
+            <h5>{item.Name}</h5>
+            <div className="star">
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+            </div>
+            <h4>{item.Price}</h4>
           </div>
-          <h4>Rs. 2200</h4>
+          <a href="#" className="cart">
+            <i className="fa-solid fa-cart-shopping"></i>
+          </a>
         </div>
-        <a href="#" class="cart">
-          <i class="fa-solid fa-cart-shopping"></i>
-        </a>
-      </div>
+      ))}
     </>
   );
 }

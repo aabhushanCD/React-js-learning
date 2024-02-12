@@ -1,5 +1,10 @@
 .list-group-item.aabhushan {
   color: white;
   background-color: green;
-  width: 237px;
+  text-align: center;
+  min-width: 0px;
+}
+.Cofee-heading {
+  text-align: center;
+  min-width: 0px;
 }

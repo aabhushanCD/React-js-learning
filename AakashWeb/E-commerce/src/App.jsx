@@ -5,8 +5,51 @@ import Features from "./components/features";
 import Product from "./components/Product";
 import Banner from "./components/Banner";
 import Pro from "./Pro_container";
+import Footer from "./components/Footer";
 function App() {
   let arrayProduct = [
+    {
+      Name: "Polo T-Shitr",
+      Price: "Rs.10000",
+      Brand: "Addidas",
+    },
+    {
+      Name: " T-Shitr",
+      Price: "Rs.100",
+      Brand: "Addidas",
+    },
+    {
+      Name: "Polo T",
+      Price: "Rs.1000",
+      Brand: "Addidas",
+    },
+    {
+      Name: "Polo",
+      Price: "Rs.10000",
+      Brand: "Addidas",
+    },
+    {
+      Name: "Shitr",
+      Price: "Rs.10000",
+      Brand: "Addidas",
+    },
+    {
+      Name: "loT",
+      Price: "Rs.10",
+      Brand: "Addidas",
+    },
+    {
+      Name: "Polo T-Shitr",
+      Price: "Rs.10000",
+      Brand: "Addidas",
+    },
+    {
+      Name: "Polo T-Shitr",
+      Price: "Rs.10000",
+      Brand: "Addidas",
+    },
+  ];
+  let Pro_ = [
     {
       Name: "Polo T-Shitr",
       Price: "Rs.10000",
@@ -73,14 +116,7 @@ function App() {
         <h2>New Arrivals</h2>
         <p>Summer Collection New Modern Design</p>
         <div class="pro-container">
-          <Pro></Pro>
-          <Pro></Pro>
-          <Pro></Pro>
-          <Pro></Pro>
-          <Pro></Pro>
-          <Pro></Pro>
-          <Pro></Pro>
-          <Pro></Pro>
+          <Pro content={Pro_}></Pro>
         </div>
       </section>
 
@@ -127,63 +163,7 @@ function App() {
           <button class="normal">Sign Up</button>
         </div>
       </section>
-
-      <footer class="section-p1">
-        <div class="col">
-          <img class="logo" src="./img/logo.png" alt="" />
-          <h4>Contact</h4>
-          <p>
-            <strong>Address: </strong> 562 Wellington Road, Street 32, San
-            Fransisco
-          </p>
-          <p>
-            <strong>Phone: </strong> +01 2222 365 /(+91) 01 2345 6789
-          </p>
-          <p>
-            <strong>Hours: </strong> 10:00 - 18:00, Mon - Sat
-          </p>
-          <div class="follow">
-            <h4>Follow us</h4>
-            <div class="icon">
-              <i class="fab fa-facebook-f"></i>
-              <i class="fab fa-x-twitter"></i>
-              <i class="fab fa-instagram"></i>
-              <i class="fab fa-pinterest-p"></i>
-              <i class="fab fa-youtube"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <h4>About</h4>
-          <a href="#">About Us</a>
-          <a href="#">Delivery Information</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Contact Us</a>
-        </div>
-        <div class="col">
-          <h4>My Account</h4>
-          <a href="#">Sign In</a>
-          <a href="#">View Cart</a>
-          <a href="#">My Wishlist</a>
-          <a href="#">Track My Order</a>
-          <a href="#">Help</a>
-        </div>
-        <div class="col install">
-          <h4>Install App</h4>
-          <p>From App Store or Google Play</p>
-          <div class="row">
-            <img src="./img/pay/app.jpg" alt="" />
-            <img src="./img/pay/play.jpg" alt="" />
-          </div>
-          <p>Secured Payment Gateways</p>
-          <img src="./img/pay/pay.png" alt="" />
-        </div>
-
-        <div class="copyright">
-          &copy 2024. cara - HTML CSS Ecommerce Project
-        </div>
-      </footer>
+      <Footer></Footer>
     </>
   );
 }

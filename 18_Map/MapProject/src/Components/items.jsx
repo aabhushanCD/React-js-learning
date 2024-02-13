@@ -1,10 +1,10 @@
 import styles from "./items.module.css";
-const Item = ({ coffeeitems, handiling }) => {
+const Item = ({ coffeeitems, handiling, isClicked }) => {
   // let {coffeeitems} = props
 
   return (
     <>
-      <li className="list-group-item aabhushan">
+      <li className={`list-group-item aabhushan ${isClicked && "active"}`}>
         <span>{coffeeitems} </span>
         <button className={styles.BuyBtn} onClick={handiling}>
           Buy

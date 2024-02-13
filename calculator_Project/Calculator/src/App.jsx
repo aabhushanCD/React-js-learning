@@ -1,27 +1,49 @@
 import "./App.css";
 import Buttons from "./Components/Buttons";
+import Display from "./Components/Display";
+import Container from "./Components/Container";
+import { useState } from "react";
+
 function App() {
+  let ArrayBtn = [
+    "C",
+    "X",
+    "%",
+    "/",
+    "7",
+    "8",
+    "9",
+    "*",
+    "4",
+    "5",
+    "6",
+    "-",
+    "1",
+    "2",
+    "3",
+    "+",
+    "0",
+    ".",
+    "=",
+  ];
+  const [calVal, sethandle] = useState("");
+  const handle = (btn) => {
+    if (btn === "C") {
+      sethandle("");
+    } else if (btn === "=") {
+      let result = eval(calVal);
+      sethandle(result);
+    } else {
+      const newDisplayValue = calVal + btn;
+      sethandle(newDisplayValue);
+    }
+  };
   return (
-    <>
-      <input placeholder="Enter here" className="Screen"></input>
-      <div className="Butn">
-        <Buttons Buttons={"/"}></Buttons>
-        <Buttons Buttons={"*"}></Buttons>
-        <Buttons Buttons={"-"}></Buttons>
-        <Buttons Buttons={7}></Buttons>
-        <Buttons Buttons={8}></Buttons>
-        <Buttons Buttons={9}></Buttons>
-        <Buttons Buttons={"+"}></Buttons>
-        <Buttons Buttons={4}></Buttons>
-        <Buttons Buttons={5}></Buttons>
-        <Buttons Buttons={6}></Buttons>
-        <Buttons Buttons={1}></Buttons>
-        <Buttons Buttons={2}></Buttons>
-        <Buttons Buttons={3}></Buttons>
-        <Buttons Buttons={0}></Buttons>
-        <Buttons Buttons={"."}></Buttons>
-      </div>
-    </>
+    <Container>
+      <Display displayValue={calVal}></Display>
+      <hr></hr>
+      <Buttons ArrayBtn={ArrayBtn} handleOnclick={handle}></Buttons>
+    </Container>
   );
 }
 

@@ -1,0 +1,7 @@
+.Screen {
+  margin: 10px;
+  width: 87%;
+  font-size: xx-large;
+  height: 40px;
+  overflow: auto;
+}

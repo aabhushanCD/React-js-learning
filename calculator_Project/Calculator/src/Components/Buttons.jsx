@@ -1,9 +1,17 @@
-let Buttons = ({ button }) => {
-  let index = 0;
+import styles from "./Buttons.module.css";
+let Buttons = ({ ArrayBtn, handleOnclick }) => {
   return (
-    <>
-      <button id="butnn">{button}</button>
-    </>
+    <div>
+      {ArrayBtn.map((btn) => (
+        <button
+          key={btn}
+          className={styles.Buttons_}
+          onClick={() => handleOnclick(btn)}
+        >
+          {btn}
+        </button>
+      ))}
+    </div>
   );
 };
 export default Buttons;

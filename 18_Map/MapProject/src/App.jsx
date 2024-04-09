@@ -6,7 +6,7 @@ import CoffeeInput from "./Components/Cofee-input";
 import { useState } from "react";
 function App() {
   let [items, setitems] = useState([
-    "Mocha not Now",
+    "Moccha",
     "Americano",
     "Latte",
     "Espresso",
@@ -21,18 +21,20 @@ function App() {
   };
   return (
     <>
-      <Container>
-        <h1 className="Cofee-heading">Coffee Shop</h1>
+      <center>
+        <Container>
+          <h1 className="Cofee-heading">Coffee Shop</h1>
 
-        <ErrorMessage arg={items}></ErrorMessage>
-        <CoffeeInput handleKeyDown={onKeyDown}></CoffeeInput>
+          <ErrorMessage arg={items}></ErrorMessage>
+          <CoffeeInput handleKeyDown={onKeyDown}></CoffeeInput>
 
-        <CoffeeItems arg={items}></CoffeeItems>
-      </Container>
+          <CoffeeItems arg={items}></CoffeeItems>
+        </Container>
 
-      {/* <Container>
+        {/* <Container>
         <p>This is nothing available </p>
       </Container> */}
+      </center>
     </>
   );
 }

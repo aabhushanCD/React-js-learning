@@ -7,6 +7,7 @@ function App() {
       <Head></Head>
       <Com_2></Com_2>
       <GetTime></GetTime>
+      
     </center>
   );
 }

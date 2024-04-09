@@ -10,10 +10,7 @@ function App() {
       <p>the sum of two number 5 and 6 is {Sum(5,6)} </p>
       <Random></Random>
       <Random></Random>
-      <Random></Random>
-      <Random></Random>
-      <Random></Random>
-      <Random></Random>
+      
       
     </div>
   );

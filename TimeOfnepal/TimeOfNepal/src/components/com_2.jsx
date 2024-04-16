@@ -1,6 +1,6 @@
 function Com_2() {
   return (
-    <div class="TmPar">
+    <div className="TmPar">
       This is the clock that shows the time in Nepal at all time
     </div>
   );

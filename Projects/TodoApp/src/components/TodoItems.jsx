@@ -11,8 +11,8 @@ const TodoItems = () => {
     <>
       {Items.map((Name, index = 0) => (
         <ToDo
-          key={(index = index + 1)}
-          name={Name.name}
+          key={Name + `${index++}`}
+          Name={Name.Name}
           date={Name.date}
           handleDelete={handleDelete}
         ></ToDo>

@@ -1,9 +1,22 @@
+import { useEffect, useState } from "react";
+
 function GetTime() {
-  let time = new Date();
+  const [time, settime] = useState(new Date());
+
+  useEffect(() => {
+    const intervalid = setInterval(() => {
+      settime(new Date());
+    }, 1000);
+
+    return () => {
+      clearInterval(intervalid);
+    };
+  }, []);
+
   return (
-    <div class="TmShow">
+    <div className="TmShow">
       This is the Cutternt Time:
-      {time.toDateString()} ---- {time.toLocaleTimeString()}
+      {time.toDateString()} {time.toLocaleTimeString()}
     </div>
   );
 }
